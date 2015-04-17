@@ -63,7 +63,7 @@ class ArrayFunction
     {
         $timeStart = microtime(true);
         for ($i = 0; $i <= $this->continuous; $i++) {
-            if ($this->data) {
+            if ((bool)$this->data) {
 
             }
         }
@@ -76,7 +76,7 @@ class ArrayFunction
     {
         $timeStart = microtime(true);
         for ($i = 0; $i <= $this->continuous; $i++) {
-            if (!$this->data) {
+            if (!(bool)$this->data) {
 
             }
         }
@@ -89,7 +89,7 @@ class ArrayFunction
     {
         $timeStart = microtime(true);
         for ($i = 0; $i <= $this->continuous; $i++) {
-            if ((bool)$this->data) {
+            if ($this->data) {
 
             }
         }
@@ -102,7 +102,7 @@ class ArrayFunction
     {
         $timeStart = microtime(true);
         for ($i = 0; $i <= $this->continuous; $i++) {
-            if (!(bool)$this->data) {
+            if (!$this->data) {
 
             }
         }
