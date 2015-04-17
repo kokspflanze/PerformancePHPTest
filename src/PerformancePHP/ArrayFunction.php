@@ -63,7 +63,46 @@ class ArrayFunction
     {
         $timeStart = microtime(true);
         for ($i = 0; $i <= $this->continuous; $i++) {
+            if ($this->data) {
+
+            }
+        }
+        $timeEnd = microtime(true);
+
+        return $timeEnd - $timeStart;
+    }
+
+    public function functionCastNotBool()
+    {
+        $timeStart = microtime(true);
+        for ($i = 0; $i <= $this->continuous; $i++) {
+            if (!$this->data) {
+
+            }
+        }
+        $timeEnd = microtime(true);
+
+        return $timeEnd - $timeStart;
+    }
+
+    public function functionBool()
+    {
+        $timeStart = microtime(true);
+        for ($i = 0; $i <= $this->continuous; $i++) {
             if ((bool)$this->data) {
+
+            }
+        }
+        $timeEnd = microtime(true);
+
+        return $timeEnd - $timeStart;
+    }
+
+    public function functionNotBool()
+    {
+        $timeStart = microtime(true);
+        for ($i = 0; $i <= $this->continuous; $i++) {
+            if (!(bool)$this->data) {
 
             }
         }
@@ -77,19 +116,6 @@ class ArrayFunction
         $timeStart = microtime(true);
         for ($i = 0; $i <= $this->continuous; $i++) {
             if (!empty($this->data)) {
-
-            }
-        }
-        $timeEnd = microtime(true);
-
-        return $timeEnd - $timeStart;
-    }
-
-    public function functionCastNotBool()
-    {
-        $timeStart = microtime(true);
-        for ($i = 0; $i <= $this->continuous; $i++) {
-            if (!(bool)$this->data) {
 
             }
         }
