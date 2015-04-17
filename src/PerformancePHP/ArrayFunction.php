@@ -4,7 +4,7 @@
 namespace PerformancePHP;
 
 
-class ArrayFunctions
+class ArrayFunction
 {
     /**
      * @var int
@@ -46,6 +46,19 @@ class ArrayFunctions
         return $timeEnd - $timeStart;
     }
 
+    public function functionSizeOf()
+    {
+        $timeStart = microtime(true);
+        for ($i = 0; $i <= $this->continuous; $i++) {
+            if (sizeof($this->data) > 0) {
+
+            }
+        }
+        $timeEnd = microtime(true);
+
+        return $timeEnd - $timeStart;
+    }
+
     public function functionCastBool()
     {
         $timeStart = microtime(true);
@@ -71,5 +84,32 @@ class ArrayFunctions
 
         return $timeEnd - $timeStart;
     }
+
+    public function functionCastNotBool()
+    {
+        $timeStart = microtime(true);
+        for ($i = 0; $i <= $this->continuous; $i++) {
+            if (!(bool)$this->data) {
+
+            }
+        }
+        $timeEnd = microtime(true);
+
+        return $timeEnd - $timeStart;
+    }
+
+    public function functionEmpty()
+    {
+        $timeStart = microtime(true);
+        for ($i = 0; $i <= $this->continuous; $i++) {
+            if (!empty($this->data)) {
+
+            }
+        }
+        $timeEnd = microtime(true);
+
+        return $timeEnd - $timeStart;
+    }
+
 
 }
