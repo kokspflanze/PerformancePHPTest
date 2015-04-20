@@ -51,7 +51,7 @@ class ArrayFunction
         $timeStart = microtime(true);
         for ($i = 0; $i <= $this->continuous; $i++) {
             if (sizeof($this->data) > 0) {
-
+                $bar = sizeof($this->data);
             }
         }
         $timeEnd = microtime(true);
@@ -64,7 +64,7 @@ class ArrayFunction
         $timeStart = microtime(true);
         for ($i = 0; $i <= $this->continuous; $i++) {
             if ((bool)$this->data) {
-
+                $bar = (bool)$this->data;
             }
         }
         $timeEnd = microtime(true);
@@ -77,7 +77,7 @@ class ArrayFunction
         $timeStart = microtime(true);
         for ($i = 0; $i <= $this->continuous; $i++) {
             if (!(bool)$this->data) {
-
+                $bar = !(bool)$this->data;
             }
         }
         $timeEnd = microtime(true);
@@ -90,7 +90,7 @@ class ArrayFunction
         $timeStart = microtime(true);
         for ($i = 0; $i <= $this->continuous; $i++) {
             if ($this->data) {
-
+                $bar = $this->data;
             }
         }
         $timeEnd = microtime(true);
@@ -103,7 +103,7 @@ class ArrayFunction
         $timeStart = microtime(true);
         for ($i = 0; $i <= $this->continuous; $i++) {
             if (!$this->data) {
-
+                $bar = !$this->data;
             }
         }
         $timeEnd = microtime(true);
@@ -116,7 +116,7 @@ class ArrayFunction
         $timeStart = microtime(true);
         for ($i = 0; $i <= $this->continuous; $i++) {
             if (!empty($this->data)) {
-
+                $bar = !empty($this->data);
             }
         }
         $timeEnd = microtime(true);
@@ -128,8 +128,8 @@ class ArrayFunction
     {
         $timeStart = microtime(true);
         for ($i = 0; $i <= $this->continuous; $i++) {
-            if (!empty($this->data)) {
-
+            if (empty($this->data)) {
+                $bar = empty($this->data);
             }
         }
         $timeEnd = microtime(true);
