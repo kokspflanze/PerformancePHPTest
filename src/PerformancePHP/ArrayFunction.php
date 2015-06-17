@@ -59,7 +59,7 @@ class ArrayFunction
         return $timeEnd - $timeStart;
     }
 
-    public function functionCastBool()
+    public function functionCastBooL()
     {
         $timeStart = microtime(true);
         for ($i = 0; $i <= $this->continuous; $i++) {
