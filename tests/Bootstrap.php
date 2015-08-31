@@ -49,3 +49,10 @@ $array = new ArrayFunction();
 $time = $array->functionEmpty();
 
 var_dump('functionEmpty => ' . $time);
+
+
+list(,$foo) = array('#','');
+
+var_dump($foo);
+
+list(,) = array('#','');
