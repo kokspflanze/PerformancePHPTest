@@ -54,5 +54,3 @@ var_dump('functionEmpty => ' . $time);
 list(,$foo) = array('#','');
 
 var_dump($foo);
-
-list(,) = array('#','');
